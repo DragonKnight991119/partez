@@ -1,0 +1,13 @@
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
+img {
+    max-width: 100%;
+}

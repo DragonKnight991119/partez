@@ -1,0 +1,22 @@
+{% extends "layout.twig" %}
+
+{% set content %}
+    <h1 class="text-2xl">⚙️ Settings</h1>
+    <p>Here you can set some features to admin your app.</p>
+    <div class="row">
+        <div class="col-lg-6">
+            <h2 class="mb-4 border-bottom">Routes</h2>
+            <h3>Folders in the <code>src/controller</code> directory:</h3>
+            {{ controllers|raw }}
+            <h3>Content of the <code>config/routes.yaml</code> file:</h3>
+            {{ renderedRoutes|raw }}
+        </div>
+        <div class="col-lg-6">
+            <h2 class="mb-4 border-bottom">Texts</h2>   
+            <h3>Content of the <code>config/texts.yaml</code> file:</h3>
+            {{ renderedTexts|raw }}
+        </div>
+    </div>
+    <h2 class="mb-4 border-bottom">API url<h2>
+    <code><a href="{{ app_subdir }}/api" alt="Api url">{{ app_subdir }}/api</a></code>
+{% endset %}

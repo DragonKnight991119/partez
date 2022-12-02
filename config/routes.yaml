@@ -1,0 +1,15 @@
+- route: "/"
+  name: "Home"
+  controller: "/Home/controller.php"
+  onNavbar: true
+
+- route: "/about"
+  name: "About"
+  controller: "/About/controller.php"
+  onNavbar: true
+
+- route: "/admin"
+  name: "Admin"
+  controller: "/Admin/controller.php"
+  onNavbar: false
+  

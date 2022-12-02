@@ -1,0 +1,28 @@
+{
+    "name": "abollinger/php-starter",
+    "type": "library",
+    "description": "A starting kit for small php app",
+    "license": "MIT",
+    "require": {
+        "twig/twig": "^3.4",
+        "twig/html-extra": "^3.4",
+        "twig/intl-extra": "^3.4",
+        "symfony/yaml": "^6.1",
+        "erusev/parsedown": "^1.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Abollinger\\PHPStarter\\": "src/"
+        }
+    },
+    "scripts": {
+        "start": "php -S localhost:8000",
+        "bricolo": "php config/Bricolo.class.php"
+    },
+    "authors": [
+        {
+            "name": "Antoine Bollinger",
+            "email": "antoine.bollinger@gmail.com"
+        }
+    ]
+}

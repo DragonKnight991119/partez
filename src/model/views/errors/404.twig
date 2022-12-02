@@ -1,0 +1,21 @@
+{% extends "layout.twig" %}
+
+{% block main %}
+    <main class="container d-flex align-items-center justify-content-center">
+        <div class="row w-75 align-items-center">
+            <div class="col-lg-3">
+                <p class="h1 text-center">🔍️</p>
+            </div> 
+            <div class="col-lg-9">
+                <h1>Error {{ _params.code }}</h1>
+                <h2 class="text-muted">{{ _params.message }}</h2>
+                <p>Relax, have a 🍻 and look through this available pages:</p>
+                <ul class="list-inside list-disc">
+                    {% for route in _params.routes %}
+                        <li><a class="link-secondary" href="{{ app_subdir ~ route.route }}">{{ route.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </main>
+{% endblock %}

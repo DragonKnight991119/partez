@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg bg-white fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="{{ app_subdir }}/">
+            <img src="{{ app_subdir }}/public/favicon.svg" alt="Logo" width="30" height="30" class="d-inline-block align-text-center"/> Starter
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            {% for route in _params.routes %}
+                <li class="nav-item">
+                    <a class="{{ html_classes('nav-link', { 
+                        'active': route.route == _params.route.route
+                    }) }}" href="{{ app_subdir ~ route.route }}">{{ route.name }}</a>
+                </li>
+            {% endfor %}
+            </ul>
+            <a class="{{ html_classes('nav-link', { 
+                'active': _params.route.route == "/admin"
+            }) }}" href="{{ app_subdir }}/admin">⚙️</a>
+        </div>
+    </div>
+</nav>
