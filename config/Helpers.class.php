@@ -12,23 +12,25 @@ class Helpers
 	/**
 	 * Render PHP array into a HTML ul list
 	 * 
-	 * @param array $arr
-	 * @return string 		Default return is an empty string, else it's a HTML ul list of the array
+	 * @param array $arr		The array to render as a list
+	 * @param array $classes 	A array of classes to apply to the ul/li. Expecting ["ul" => "classForTheUlTag", "li" => "classForTheLiTag"]
+	 * @return string 			Default return is an empty string, else it's a HTML ul list of the array
 	 */
     public static function printArray(
-		$arr
+		$arr,
+		$classes = []
 	) : string {
 		if (!is_array($arr)) return "";
 		static $closingTag = array();
-		$str = "<ul>\r\n";
+		$str = "<ul".($classes["ul"] ?? "").">\r\n";
 		$closingTag[] = "</ul>\r\n";
 		foreach ($arr as $k => $v) {
 			if(is_array($v)){
-				$str .= "<li>$k => <em>array</em>\r\n";
+				$str .= "<li".($classes["li"] ?? "").">$k => <em>array</em>\r\n";
 				$str .= self::printArray($v);
 			} else {
 				$display = is_bool($v) ? ($v ? 'true' : 'false') : htmlentities(is_string($v) || is_float($v) || is_int($v) ? $v : '');
-				$str .= "<li>$k => <span style=\"font-weight:bold;\">".$display."</span>";
+				$str .= "<li".($classes["li"] ?? "").">$k => <strong>".$display."</strong>";
 			}
 			$closingTag[] = "</li>\r\n";
 			$str .= array_pop($closingTag);
