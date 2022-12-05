@@ -2,7 +2,6 @@
     "name": "abollinger/partez",
     "type": "project",
     "description": "A simple & fast PHP starter kit for web app",
-    "version": "1.1.3",
     "homepage": "https://abollinger.fr/partez/",
     "license": "MIT",
     "require": {
