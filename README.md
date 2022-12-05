@@ -1,5 +1,5 @@
 <p align="center">
-    <h1 align="center"><img src="public/partez.png" height="40"/></h1>
+    <p align="center"><img src="public/partez.png" height="40"/></p>
     <br/>
     <p align="center">A simple & fast PHP starter kit for web app.</p>
     <p align="center">
