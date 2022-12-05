@@ -18,13 +18,20 @@ This project is published on **[Packagist](https://packagist.org/packages/abolli
 
 ## Getting started
 
-Create a new project with: 
+### Requirements
+
+All you need is [Composer](https://getcomposer.org/) to create the project, install the dependencies and run the server (in developpement mode).
+
+### Steps
+
+1. First create a new folder for you project and open a terminal in that folder
+2. Run the following command. This will create all the necessaries files and install the dependencies of the project:
 
 ```bash
 composer create-project abollinger/partez . "1.2.*"
 ```
+3. Finally run the simple command:
 
-Then simply run the PHP server web with:
 ```bash
 composer serve
 ``` 
