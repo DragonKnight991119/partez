@@ -19,7 +19,7 @@ abstract class Bootstrap
         $params = null
     ) : bool {
         // APP constants
-        define("APP_TITLE", "PHP Starter");
+        define("APP_TITLE", "partez");
         define("APP_ROOT", str_replace("\\", "/", dirname(__DIR__)));
         define("APP_SUBDIR", str_replace(str_replace("\\", "/",$_SERVER["DOCUMENT_ROOT"]), "", APP_ROOT));
         define("APP_MODEL_PATH", APP_ROOT . "/src/model");

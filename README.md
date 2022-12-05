@@ -1,7 +1,9 @@
 <p align="center">
-    <h1 align="center"><img src="public/favicon.svg" height="40" width="40"/> Starter kit</h1>
+    <h1 align="center"><img src="public/partez.png" height="40"/></h1>
+    <br/>
+    <p align="center">A simple & fast PHP starter kit for web app.</p>
     <p align="center">
-        <a href="https://github.com/Antoine-Bollinger/php-starter/issues">🐛 Report Bug</a>
+        <a href="https://github.com/Antoine-Bollinger/partez/issues">🐛 Report Bug</a>
     </p>
 </p>
 
@@ -19,15 +21,17 @@ This project is published on **[Packagist](https://packagist.org/packages/abolli
 Create a new project with: 
 
 ```bash
-composer create-project abollinger/php-starter . "1.1.*"
+composer create-project abollinger/partez . "1.2.*"
 ```
 
 Then simply run the PHP server web with:
 ```bash
-php -S localhost:8000
+composer serve
 ``` 
 
 and then open your browser at <a href="http://localhost:8000">localhost:8000</a> to see the result.
+
+💡 You can customize the ```composer serve``` script in the composer.json file.
 
 ## How it works
 
