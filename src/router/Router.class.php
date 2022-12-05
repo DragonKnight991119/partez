@@ -6,17 +6,32 @@ use \Abollinger\PHPStarter\Controller\FrontendController;
 
 class Router 
 {
+    private $path;
+    private $route;
     private $routes;
     private $routesOnNavbar;
-    private $route;
     private $controller;
     private $texts;
 
     public function __construct(
-        $params = null
+        $path = ""
     ) {
+        $this->setPath($path);
         $this->setRoutes();
         $this->setTexts();
+    }
+
+    /**
+     * Set the path use to determine with route will be run
+     * 
+     * @param string $path  Path of the requested route
+     * @return bool true
+     */
+    private function setPath(
+        $path = ""
+    ) : bool {
+        $this->path = $path;
+        return true;
     }
 
     /**
@@ -47,20 +62,16 @@ class Router
     }
 
     /**
-     * Get the requested route, compare if it exists in the declared routes and, if so, set the right controller
+     * Compare if the requested exists in the declared routes and, if so, set the right controller
      * 
      * @param null
      * @return bool
      */
-    public function setRoute(
+    public function start(
         $params = null
     ) : bool {
         try {
-			$request_uri = str_replace(APP_SUBDIR, "", $_SERVER["REQUEST_URI"]);
-			$main_url = explode("?", $request_uri, 2);
-            $route = $main_url[0];
-            
-            $key = array_search($route, array_column($this->routes, "route"));
+            $key = array_search($this->path, array_column($this->routes, "route"));
             if ($key === false)
                 throw new \Exception("page", 404);
 
@@ -88,5 +99,3 @@ class Router
         }
     }
 }
-
-return new Router();

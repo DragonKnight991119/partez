@@ -8,7 +8,6 @@ namespace Abollinger\PHPStarter\Config;
  */
 abstract class Bootstrap 
 {
-
     /**
      * Set the constants for the all app
      * 
@@ -27,7 +26,7 @@ abstract class Bootstrap
         define("APP_ROUTER_PATH", APP_ROOT . "/src/router");
 
         // API constants
-        define("API_ROOT", str_replace("\\", "/", dirname(__DIR__) . "/api"));
+        define("API_URL", str_replace("\\", "/", dirname(__DIR__) . "/api"));
         return true;
     }
 
@@ -52,3 +51,6 @@ RewriteRule . index.php [L,QSA]");
         return true;
 	}
 }
+
+Bootstrap::setConstants();
+Bootstrap::setHtaccess(APP_ROOT, APP_SUBDIR);
