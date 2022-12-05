@@ -35,7 +35,7 @@ This project is published on **[Packagist](https://packagist.org/packages/abolli
         <li><a href="#the-API">The API</a></li>
       </ul>
     <li><a href="#bricolo">Bricolo</a></li>
-    <li><a href="#build-width">Build with</a></li>
+    <li><a href="#build-with">Build with</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -159,6 +159,6 @@ Do not hesitate, every little contribution is a great way to make this starter k
 
 <!-- CONTACT -->
 
-## Contact 📧
+## Contact
 
 Antoine Bollinger - [LinkedIn](https://www.linkedin.com/in/antoinebollinger/) - antoine.bollinger@gmail.com
