@@ -7,12 +7,12 @@
     </p>
 </p>
 
-[![Total Downloads](https://img.shields.io/packagist/dt/abollinger/php-starter)](https://packagist.org/packages/abollinger/php-starter)
-[![Latest Stable Version](https://img.shields.io/packagist/v/abollinger/php-starter)](https://packagist.org/packages/abollinger/php-starter)
-[![License](https://img.shields.io/packagist/l/abollinger/php-starter)](https://packagist.org/packages/abollinger/php-starter)
+[![Total Downloads](https://img.shields.io/packagist/dt/abollinger/partez)](https://packagist.org/packages/abollinger/partez)
+[![Latest Stable Version](https://img.shields.io/packagist/v/abollinger/partez)](https://packagist.org/packages/abollinger/partez)
+[![License](https://img.shields.io/packagist/l/abollinger/partez)](https://packagist.org/packages/abollinger/partez)
 
 This kit is meant to help developpers to quickly create a basic PHP app with router.
-This project is published on **[Packagist](https://packagist.org/packages/abollinger/php-starter)** so you can use it via composer.
+This project is published on **[Packagist](https://packagist.org/packages/abollinger/partez)** so you can use it via composer.
 
 ![Home](public/images/preview.jpg)
 
