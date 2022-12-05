@@ -4,6 +4,8 @@
     <p align="center">A simple & fast PHP starter kit for web app.</p>
     <p align="center">
         <a href="https://github.com/Antoine-Bollinger/partez/issues">🐛 Report Bug</a>
+        . 
+        <a href="https://github.com/Antoine-Bollinger/partez/issues">See on Packagist 📦️</a>
     </p>
 </p>
 
