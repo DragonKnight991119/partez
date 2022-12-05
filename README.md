@@ -16,6 +16,31 @@ This project is published on **[Packagist](https://packagist.org/packages/abolli
 
 ![Home](public/images/preview.jpg)
 
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#getting-started">Getting started</a>
+      <ul>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#steps">Steps</a></li>
+      </ul>
+    </li>
+    <li><a href="#how-it-works">How it works</a></li>
+      <ul>
+        <li><a href="#the-router">The router</a></li>
+        <li><a href="#the-pages">The pages</a></li>
+        <li><a href="#the-public-folder">The public folder</a></li>
+        <li><a href="#the-API">The API</a></li>
+      </ul>
+    <li><a href="#bricolo">Bricolo</a></li>
+    <li><a href="#build-width">Build with</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
 ## Getting started
 
 ### Requirements
