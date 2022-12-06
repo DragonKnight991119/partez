@@ -1,64 +1,23 @@
 <?php 
 namespace Abollinger\PHPStarter\Router;
 
-use \Abollinger\PHPStarter\Config\Helpers;
 use \Abollinger\PHPStarter\Controller\FrontendController;
 
-class Router 
+require_once APP_ROOT . "/config/Router.class.php";
+
+class AppRouter extends Router 
 {
-    private $path;
     private $route;
-    private $routes;
     private $routesOnNavbar;
     private $controller;
-    private $texts;
 
     public function __construct(
-        $path = ""
+        $path = "",
+        $routesPath = "",
+        $textsPath = ""
     ) {
-        $this->setPath($path);
-        $this->setRoutes();
-        $this->setTexts();
-    }
-
-    /**
-     * Set the path use to determine with route will be run
-     * 
-     * @param string $path  Path of the requested route
-     * @return bool true
-     */
-    private function setPath(
-        $path = ""
-    ) : bool {
-        $this->path = $path;
-        return true;
-    }
-
-    /**
-     * Set a array of the availables routes edited in the config/routes.yaml file
-     * 
-     * @param null
-     * @return bool true
-     */
-    private function setRoutes(
-        $params = null
-    ) : bool {
-        $this->routes = Helpers::getYaml(APP_ROOT . "/config/routes.yaml");
+        parent::__construct($path, $routesPath, $textsPath);
         $this->routesOnNavbar = array_filter($this->routes, function($value) {return $value["onNavbar"];});
-        return true;
-    }
-
-    /**
-     * Set a array of the texts set in the config/texts.yaml file
-     * 
-     * @param null
-     * @return bool true
-     */
-    private function setTexts(
-        $params = null
-    ) : bool {
-        $this->texts = Helpers::getYaml(APP_ROOT . "/config/texts.yaml");
-        return true;
     }
 
     /**
