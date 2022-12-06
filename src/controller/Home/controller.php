@@ -7,6 +7,6 @@ class Controller extends FrontendController
 		$params = null
 	) {
 		parent::__construct($params);
-        $this->renderView("home.twig");
+        $this->renderView("home.html.twig");
     }
 }

@@ -53,7 +53,7 @@ class AppRouter extends Router
                 "routes" => $this->routesOnNavbar
             ]);
             $availableErrors = [404 => "404"];
-            $error->renderView("errors/" . ($availableErrors[$e->getCode()] ?? "error") . ".twig");
+            $error->renderView("errors/" . ($availableErrors[$e->getCode()] ?? "error") . ".html.twig");
             return false;
         }
     }

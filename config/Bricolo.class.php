@@ -39,7 +39,6 @@ class Bricolo
             $name = strtolower($params[0]);
 
             $controllerPath = APP_ROOT . "/src/Controller/" . $ucName;
-            $modelPath = APP_ROOT . "/src/Model/views/" . $name . ".twig";
             
             echo "Creating a new page named " . $ucName . "\r\n";
             mkdir($controllerPath);

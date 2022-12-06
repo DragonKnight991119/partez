@@ -7,7 +7,7 @@ class Controller extends FrontendController
 		$params = null
 	) {
 		parent::__construct($params);
-        $this->renderView("about.twig", [
+        $this->renderView("about.html.twig", [
             "readme" => $this->renderMd(APP_ROOT . "/README.md")
         ]);
     }
