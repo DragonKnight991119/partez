@@ -10,4 +10,11 @@ main {
 
 img {
     max-width: 100%;
+    border-radius: var(--bs-border-radius);
+}
+
+pre {
+    background-color: var(--bs-gray-100);
+    padding: var(--bs-body-font-size);
+    border-radius: var(--bs-border-radius);
 }
