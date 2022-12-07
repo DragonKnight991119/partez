@@ -139,11 +139,6 @@ The basic structure is:
 ├── src/
 │   ├── controller/
 │   │   └── [Controllers, typo is <Name>.controller.php]
-│   ├── model/
-│   │   ├── includes/
-│   │   ├── views/
-│   │   │   └── [views]
-│   │   └── layout.twig
 │   └── router/
 │       └── App.router.php
 │── templates/
