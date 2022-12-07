@@ -7,7 +7,8 @@ use \Abollinger\Partez\Router\AppRouter;
 require_once __DIR__ . "/vendor/autoload.php";
 
 $dotenv = new Dotenv();
-$dotenv->load(__DIR__.'/.env');
+if (file_exists(__DIR__.'/.env'))
+    $dotenv->load(__DIR__.'/.env');
 
 if (isset($_ENV["APP_ENV"]) && $_ENV["APP_ENV"] === "dev")
     opcache_reset();
@@ -29,5 +30,6 @@ $path = parse_url(str_replace(APP_SUBDIR, "", $_SERVER['REQUEST_URI']), PHP_URL_
 $app = new AppRouter(
     $path, 
     APP_ROOT . "/config/routes.yaml", 
-    APP_ROOT . "/config/texts.yaml");
+    APP_ROOT . "/config/texts.yaml"
+);
 $app->start();
