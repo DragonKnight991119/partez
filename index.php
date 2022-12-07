@@ -9,7 +9,7 @@ require_once __DIR__ . "/vendor/autoload.php";
 $dotenv = new Dotenv();
 $dotenv->load(__DIR__.'/.env');
 
-if ($_ENV["APP_ENV"] === "dev")
+if (isset($_ENV["APP_ENV"]) && $_ENV["APP_ENV"] === "dev")
     opcache_reset();
 
 /**
