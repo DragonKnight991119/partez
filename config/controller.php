@@ -1,14 +1,14 @@
 <?php 
-namespace Abollinger\PHPStarter\Controller;
+namespace Abollinger\Partez\Controller;
 
-use \Abollinger\PHPStarter\Config\Helpers;
+use \Abollinger\Partez\Config\Helpers;
 use \Twig\Loader\FilesystemLoader;
 use \Twig\Environment;
 use \Twig\Extra\Html\HtmlExtension;
 use \Twig\Extra\Intl\IntlExtension;
 use \Twig\Extension\DebugExtension;
 
-class FrontendController 
+class AppController 
 {
     private $twig;
     public $params;
@@ -18,6 +18,8 @@ class FrontendController
     ) {
         $this->params = $params;
         $this->setTwig();
+        if (method_exists($this, "init"))
+            $this->init();
     }
 
     /**
@@ -29,7 +31,7 @@ class FrontendController
     private function setTwig(
         $cache = false
     ) : bool {
-        $loader = new FilesystemLoader(APP_MODEL_PATH);
+        $loader = new FilesystemLoader(APP_TEMPLATES_PATH);
         $this->twig = new Environment($loader, [
             "cache" => $cache,
             "debug" => true
@@ -55,7 +57,7 @@ class FrontendController
         $params = []
     ) : bool {
         try {
-            if (!file_exists(APP_MODEL_PATH . "/views/" . $file)) {
+            if (!file_exists(APP_TEMPLATES_PATH . "/views/" . $file)) {
                 throw new \Exception("model", 500);
             }
 			echo $this->twig->render("views/" . $file, $params);

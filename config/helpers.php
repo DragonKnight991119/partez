@@ -1,5 +1,5 @@
 <?php
-namespace Abollinger\PHPStarter\Config;
+namespace Abollinger\Partez\Config;
 
 use \Symfony\Component\Yaml\Yaml;
 

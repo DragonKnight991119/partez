@@ -1,12 +1,11 @@
 <?php 
-namespace Abollinger\PHPStarter\Controller;
+namespace Abollinger\Partez\Controller;
 
-class Controller extends FrontendController
+final class AdminController extends AppController
 {
-    public function __construct(
-		$params = null
+    public function init(
+
 	) {
-		parent::__construct($params);
         $this->renderView("admin.html.twig", [
             "renderedTexts" => $this->renderYaml(APP_ROOT . "/config/texts.yaml"),
             "renderedRoutes" => $this->renderYaml(APP_ROOT . "/config/routes.yaml"),

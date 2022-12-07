@@ -1,5 +1,5 @@
 <?php
-namespace Abollinger\PHPStarter\Config;
+namespace Abollinger\Partez\Config;
 
 /**
  * Bootstrap for the web app
@@ -21,9 +21,11 @@ abstract class Bootstrap
         define("APP_TITLE", "partez");
         define("APP_ROOT", str_replace("\\", "/", dirname(__DIR__)));
         define("APP_SUBDIR", str_replace(str_replace("\\", "/",$_SERVER["DOCUMENT_ROOT"]), "", APP_ROOT));
+        define("APP_CONFIG_PATH", __DIR__);
         define("APP_MODEL_PATH", APP_ROOT . "/src/model");
         define("APP_CONTROLLER_PATH", APP_ROOT . "/src/controller"); 
         define("APP_ROUTER_PATH", APP_ROOT . "/src/router");
+        define("APP_TEMPLATES_PATH", APP_ROOT . "/templates");
 
         // API constants
         define("API_URL", str_replace("\\", "/", dirname(__DIR__) . "/api"));

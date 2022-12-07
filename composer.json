@@ -9,16 +9,17 @@
         "twig/html-extra": "^3.4",
         "twig/intl-extra": "^3.4",
         "symfony/yaml": "^6.1",
-        "erusev/parsedown": "^1.7"
+        "erusev/parsedown": "^1.7",
+        "symfony/dotenv": "^6.2"
     },
     "autoload": {
         "psr-4": {
-            "Abollinger\\PHPStarter\\": "src/"
+            "Abollinger\\Partez\\": "src/"
         }
     },
     "scripts": {
         "serve": "php -S localhost:8000",
-        "bricolo": "php config/Bricolo.class.php"
+        "bricolo": "php bricolo/bricolo.php"
     },
     "config": {
         "process-timeout": 0
@@ -29,16 +30,6 @@
             "email": "antoine.bollinger@gmail.com",
             "homepage": "https://antoinebollinger.fr",
             "role": "Developer"
-        }
-    ],
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packagist.org/packages/abollinger/partez"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/Antoine-Bollinger/partez"
         }
     ]
 }

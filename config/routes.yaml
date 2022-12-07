@@ -1,15 +1,14 @@
-- route: "/"
-  name: "Home"
-  controller: "/Home/controller.php"
-  onNavbar: true
+- route: /
+  name: Home
+  controller: Abollinger\Partez\Controller\HomeController
 
-- route: "/about"
-  name: "About"
-  controller: "/About/controller.php"
-  onNavbar: true
+- route: /about
+  name: About
+  controller: Abollinger\Partez\Controller\AboutController
 
-- route: "/admin"
-  name: "Admin"
-  controller: "/Admin/controller.php"
+- route: /admin
+  name: Admin
+  title: Settings
+  controller: Abollinger\Partez\Controller\AdminController
   onNavbar: false
   

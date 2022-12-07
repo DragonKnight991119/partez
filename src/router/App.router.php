@@ -1,9 +1,7 @@
 <?php 
-namespace Abollinger\PHPStarter\Router;
+namespace Abollinger\Partez\Router;
 
-use \Abollinger\PHPStarter\Controller\FrontendController;
-
-require_once APP_ROOT . "/config/Router.class.php";
+use \Abollinger\Partez\Controller\AppController;
 
 class AppRouter extends Router 
 {
@@ -17,7 +15,7 @@ class AppRouter extends Router
         $textsPath = ""
     ) {
         parent::__construct($path, $routesPath, $textsPath);
-        $this->routesOnNavbar = array_filter($this->routes, function($value) {return $value["onNavbar"];});
+        $this->routesOnNavbar = array_filter($this->routes, function($value) {return $value["onNavbar"] ?? true;});
     }
 
     /**
@@ -35,21 +33,24 @@ class AppRouter extends Router
                 throw new \Exception("page", 404);
 
             $this->route = $this->routes[$key];
-            if (!file_exists(APP_CONTROLLER_PATH . "/" . $this->route["controller"]))
+            $controllerPath = APP_CONTROLLER_PATH . "/" . $this->route["name"] . ".controller.php";
+            if (!file_exists($controllerPath))
                 throw new \Exception("controller", 500);
 
-            require_once APP_CONTROLLER_PATH . "/" . $this->route["controller"]; 
-            $this->controller = "\\Abollinger\\PHPStarter\\Controller\\Controller"; 
+            require_once $controllerPath; 
+            $this->controller = $this->route["controller"]; 
             new $this->controller([
-                "route" => $this->route, 
+                "name" => $this->route["name"],
+                "title" => $this->route["title"] ?? null, 
+                "route" => $this->route["route"] ?? null, 
                 "routes" => $this->routesOnNavbar
             ]);
             return true;
         } catch (\Exception $e) {
-            $error = new FrontendController([
+            $error = new AppController([
                 "message" => $this->texts["error"][$e->getMessage()], 
                 "code" => $e->getCode(), 
-                "route" => ["name" => "Error " . $e->getCode()],
+                "name" => "Error " . $e->getCode(),
                 "routes" => $this->routesOnNavbar
             ]);
             $availableErrors = [404 => "404"];

@@ -1,5 +1,5 @@
 <?php
-namespace Abollinger\PHPStarter\Config;
+namespace Abollinger\Partez\Config;
 
 define("APP_ROOT", dirname(__DIR__));
 
@@ -38,11 +38,10 @@ class Bricolo
             $ucName = ucfirst($params[0]);
             $name = strtolower($params[0]);
 
-            $controllerPath = APP_ROOT . "/src/Controller/" . $ucName;
+            $controllerPath = APP_ROOT . "/src/controller/" . $ucName . ".controller.php";
             
             echo "Creating a new page named " . $ucName . "\r\n";
-            mkdir($controllerPath);
-            copy(APP_ROOT . "/config/templates/controller.php", $controllerPath . "/controller.php");
+            copy(APP_ROOT . "/bricolo/templates/controller.php", $controllerPath);
             echo "Page " . $ucName . " created!\r\nPlease edit " . $controllerPath . "/controller.php" . " to configure this new page.\r\nIf you're using the routes.yaml file for the router, don't forget to add this new page in it.";
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage());

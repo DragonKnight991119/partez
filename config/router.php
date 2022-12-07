@@ -1,7 +1,7 @@
 <?php 
-namespace Abollinger\PHPStarter\Router;
+namespace Abollinger\Partez\Router;
 
-use \Abollinger\PHPStarter\Config\Helpers;
+use \Abollinger\Partez\Config\Helpers;
 
 class Router 
 {

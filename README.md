@@ -71,21 +71,24 @@ and then open your browser at <a href="http://localhost:8000">localhost:8000</a>
 
 Pages' routes are manually defined in the ```src/config/routes.yaml``` file. To see what a route must contain, let see the ```/about``` route:
 ```yaml
-- route: "/about"
-  name: "About"
-  controller: "/About/controller.php"
-  onNavbar: true
+- route: /
+  name: Home
+  controller: Abollinger\Partez\Controller\HomeController
 ```
 This means: 
 - The page can be accessed at the route ```<serverName>/about```
-- The name that will appear in the page's title is ```About```
-- The controller called is localized as ```src/Controller/About/controller.php```
+- The name that will appear in the page's title is ```About```. Also note that you can define a title here (```title: Titre```) if you prefere.
+- The name define the controller file called: ```src/controller/About.controller.php```
+- The controller called will be ```Abollinger\Partez\Controller\HomeController``` 
 
 As you can see, you are free to customized all this parameters, but it is important to respect this format. The controller will render the page as explained below.
 
 ### The pages
 
-Pages are rendered by the controller in the Controller path. This controller must be an extension of the main FrontendController (```src/Controller/<pagename>/Controller.class.php```) and render a existing Twig template.
+Pages are rendered by the controller in the ```src/controller``` path. This controller must be an extension of the main controller define in ```config/controller.php```.
+If the page's controller you must define the ```init()``` method that will call the ```renderView("page.html.twig")``` method which render the twig template.
+
+The twig templates are localized in the ```templates/``` at the root of the project. Basic twig layout is defined as ```templates/layout.html.twig``` and each page's twig template extends this layout.
 
 ### The public folder
 
@@ -97,13 +100,15 @@ A ```api/``` directory has been created at the root, with for the moment a singl
 
 ## Bricolo
 
-We've create a basic tool named Bricolo, localized in ```src/config/Bricolo.class.php```. For the moment, the only feature is to create a new page using:
+We've create a basic tool named Bricolo, localized in ```bricolo/bricolo.php```. For the moment, the only feature is to create a new page using:
 ```bash
 composer bricolo addpage <pagename>
 ```
-This will automatically create the Controller file in ```src/Controller/<pagename>/Controller.php```, this one being a copy of the template at ```src/config/templates/controller.php``` and calling the Twig's ```src/Model/views/template.twig``` view. Next steps are to create the twig view and call it in the controller.
+This will automatically create the Controller file in ```src/controller/<Pagename>.controller.php``` ( copy of the template at ```bricolo/templates/controller.php```).
 
-⛔ Do not delete the ```src/Model/views/template.twig``` as it is the default template used by each new page you create via Bricolo!
+🚩 Don't forget to rename this new controller (default is NewController) and to declare the route in the config/routes.yaml following the example above, and change the twig template used (default is ```templates/views/template.html.twig```).
+
+⛔ Do not delete the ```templates/views/template.html.twig``` as it is the default template used by each new page you create via Bricolo!
 
 ## Build with
 
@@ -117,11 +122,14 @@ The basic structure is:
 .
 ├── api/
 │   └── index.php
-├── config/
+├── bricolo/
 │   ├── templates/
-│   ├── Bootstrap.class.php
-│   ├── Bricolo.class.php
-│   ├── Helpers.class.php
+│   └── bricolo.php
+├── config/
+│   ├── boostrap.php
+│   ├── controller.php
+│   ├── helpers.php
+│   ├── router.php
 │   ├── routes.yaml
 │   └── texts.yaml
 ├── public/
@@ -129,16 +137,20 @@ The basic structure is:
 │   ├── images/
 │   └── js/
 ├── src/
-│   ├── Controller/
-│   │   ├── [pages]
-│   │   └── Controller.class.php
-│   ├── Model/
+│   ├── controller/
+│   │   └── [Controllers, typo is <Name>.controller.php]
+│   ├── model/
 │   │   ├── includes/
 │   │   ├── views/
 │   │   │   └── [views]
 │   │   └── layout.twig
-│   └── Router/
-│       └── Router.class.php
+│   └── router/
+│       └── App.router.php
+│── templates/
+│   ├── includes/
+│   ├── views/
+│   │   └── [views, typo <name>.html.twig]
+│   └── layout.twig
 └── index.php
 ```
 

@@ -11,13 +11,13 @@
             {% for route in _params.routes %}
                 <li class="nav-item">
                     <a class="{{ html_classes('nav-link', { 
-                        'active': route.route == _params.route.route
+                        'active': route.route == _params.route
                     }) }}" href="{{ app_subdir ~ route.route }}">{{ route.name }}</a>
                 </li>
             {% endfor %}
             </ul>
             <a class="{{ html_classes('nav-link', { 
-                'active': _params.route.route == "/admin"
+                'active': _params.route == "/admin"
             }) }}" href="{{ app_subdir }}/admin">⚙️</a>
         </div>
     </div>

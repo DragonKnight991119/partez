@@ -1,4 +1,4 @@
-{% set title = _params.route.name is defined ? app_title ~ " | " ~ _params.route.name : app_title %}
+{% set title = [app_title, _params.title|default(_params.name)|capitalize]|join(" | ") %}
 
 <!DOCTYPE html>
 <html lang="en">
