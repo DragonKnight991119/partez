@@ -71,15 +71,15 @@ and then open your browser at <a href="http://localhost:8000">localhost:8000</a>
 
 Pages' routes are manually defined in the ```src/config/routes.yaml``` file. To see what a route must contain, let see the ```/about``` route:
 ```yaml
-- route: /
-  name: Home
+- route: /about
+  name: About
   controller: Abollinger\Partez\Controller\HomeController
 ```
 This means: 
 - The page can be accessed at the route ```<serverName>/about```
 - The name that will appear in the page's title is ```About```. Also note that you can define a title here (```title: Titre```) if you prefere.
 - The name define the controller file called: ```src/controller/About.controller.php```
-- The controller called will be ```Abollinger\Partez\Controller\HomeController``` 
+- The controller called will be ```Abollinger\Partez\Controller\AboutController``` 
 
 As you can see, you are free to customized all this parameters, but it is important to respect this format. The controller will render the page as explained below.
 
