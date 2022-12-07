@@ -73,7 +73,7 @@ Pages' routes are manually defined in the ```src/config/routes.yaml``` file. To 
 ```yaml
 - route: /about
   name: About
-  controller: Abollinger\Partez\Controller\HomeController
+  controller: Abollinger\Partez\Controller\AboutController
 ```
 This means: 
 - The page can be accessed at the route ```<serverName>/about```
