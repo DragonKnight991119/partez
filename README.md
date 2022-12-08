@@ -11,8 +11,9 @@
 [![Latest Stable Version](https://img.shields.io/packagist/v/abollinger/partez)](https://packagist.org/packages/abollinger/partez)
 [![License](https://img.shields.io/packagist/l/abollinger/partez)](https://packagist.org/packages/abollinger/partez)
 
-This kit is meant to help developpers to quickly create a basic PHP app with router.
-This project is published on **[Packagist](https://packagist.org/packages/abollinger/partez)** so you can use it via composer.
+This kit is intended to help developpers to quickly create a simple PHP app.
+
+This project is published on **[Packagist](https://packagist.org/packages/abollinger/partez)** so you can create a new project based on it.
 
 ![Home](public/images/preview.jpg)
 
@@ -46,17 +47,17 @@ This project is published on **[Packagist](https://packagist.org/packages/abolli
 
 ### Requirements
 
-All you need is [Composer](https://getcomposer.org/) to create the project, install the dependencies and run the server (in developpement mode).
+All you need is [Composer](https://getcomposer.org/) to create the project run the server (in developpement mode).
 
 ### Steps
 
-1. First create a new folder for you project and open a terminal in that folder
+1. First create a new folder for your project and open a terminal in it
 2. Run the following command. This will create all the necessaries files and install the dependencies of the project:
 
 ```bash
 composer create-project abollinger/partez . "1.2.*"
 ```
-3. Finally run the simple command:
+3. Finally run this simple command:
 
 ```bash
 composer serve
