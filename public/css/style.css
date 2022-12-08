@@ -14,7 +14,41 @@ img {
 }
 
 pre {
+    position: relative;
     background-color: var(--bs-gray-100);
     padding: var(--bs-body-font-size);
     border-radius: var(--bs-border-radius);
+}
+
+pre.snapshot {
+    animation: snapshot 0.4s;
+}
+
+@keyframes snapshot {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+pre > a {
+    content: "📋";
+    position: absolute;
+    top: var(--bs-body-font-size);
+    right: var(--bs-body-font-size);
+    opacity: 0;
+    text-decoration: none;
+    transition: opacity 0.4s;
+    cursor: pointer;
+    z-index: 1;
+}
+
+pre:hover > a {
+    opacity: 0.4;
+}
+
+pre:hover > a:hover {
+    opacity: 1!important;
 }
