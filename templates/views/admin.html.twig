@@ -3,6 +3,8 @@
 {% set content %}
     <h1 class="text-2xl">⚙️ Settings</h1>
     <p>Here you can set some features to admin your app.</p>
+    <h2 class="mb-4 border-bottom">App title : <code>{{ app_title }}</code></h2>
+    <p>You can change this App title creating an <code>.env</code> at the root of your project and adding the variable <code>APP_TITLE=your_title</code>.</p>
     <div class="row">
         <div class="col-lg-6">
             <h2 class="mb-4 border-bottom">Routes</h2>
@@ -17,6 +19,6 @@
             {{ renderedTexts|raw }}
         </div>
     </div>
-    <h2 class="mb-4 border-bottom">API url<h2>
+    <h2 class="mb-4 border-bottom">API url</h2>
     <code><a href="{{ app_subdir }}/api" alt="Api url">{{ app_subdir }}/api</a></code>
 {% endset %}

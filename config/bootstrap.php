@@ -17,8 +17,12 @@ abstract class Bootstrap
     static public function setConstants(
         $params = null
     ) : bool {
-        // APP constants
-        define("APP_TITLE", "partez");
+        // APP TITLE
+        // 📌 The best way to define the title of your app is to create a APP_TITLE variable in a .env file at the root of the project. But you can also define the title here
+        define("APP_TITLE", $_ENV["APP_TITLE"] ?? "title");
+
+        // APP Paths contants used in the app
+        // 🚨 If you change this constants, the app may have bugs. Please be sure of what you're doing when manipulating this constants.
         define("APP_ROOT", str_replace("\\", "/", dirname(__DIR__)));
         define("APP_SUBDIR", str_replace(str_replace("\\", "/",$_SERVER["DOCUMENT_ROOT"]), "", APP_ROOT));
         define("APP_CONFIG_PATH", __DIR__);

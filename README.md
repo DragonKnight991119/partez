@@ -29,6 +29,7 @@ This project is published on **[Packagist](https://packagist.org/packages/abolli
     </li>
     <li><a href="#how-it-works">How it works</a></li>
       <ul>
+        <li><a href="#configuration">Configuration</a></li>
         <li><a href="#the-router">The router</a></li>
         <li><a href="#the-pages">The pages</a></li>
         <li><a href="#the-public-folder">The public folder</a></li>
@@ -66,6 +67,14 @@ and then open your browser at <a href="http://localhost:8000">localhost:8000</a>
 💡 You can customize the ```composer serve``` script in the composer.json file.
 
 ## How it works
+
+### Configuration
+
+1. You may want to customize the title of your app. For this, just create a ```.env``` file a the root of your project and add a variable ```APP_TITLE=your_title```. You can also define the title directly in the ```config/bootstrap.php``` file, line 21.
+
+2. You also want to customized the HTML head of you app. Please go the ```tempates/layout.html.twig``` file and make the change you need.
+
+3. Regarding the router configuration, it is described below.
 
 ### The router
 
