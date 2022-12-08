@@ -170,6 +170,6 @@ Do not hesitate, every little contribution is a great way to make this starter k
 
 If you have any question about this package, how to install, to use or to improve, feel free to contact me:
 
-Antoine Bollinger - [LinkedIn](https://www.linkedin.com/in/antoinebollinger/) - antoine.bollinger@gmail.com
+Antoine Bollinger - [LinkedIn](https://www.linkedin.com/in/antoinebollinger/) - [antoine.bollinger@gmail.com](mailto:antoine.bollinger@gmail.com)
 
 You can talk to me in 🇫🇷, 🇧🇷 or 🇬🇧.
