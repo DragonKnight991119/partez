@@ -86,7 +86,7 @@ As you can see, you are free to customized all this parameters, but it is import
 ### The pages
 
 Pages are rendered by the controller in the ```src/controller``` path. This controller must be an extension of the main controller define in ```config/controller.php```.
-If the page's controller you must define the ```init()``` method that will call the ```renderView("page.html.twig")``` method which render the twig template.
+In the page's controller you must define the ```init()``` method that will call the ```renderView("page.html.twig")``` method which render the twig template.
 
 The twig templates are localized in the ```templates/``` at the root of the project. Basic twig layout is defined as ```templates/layout.html.twig``` and each page's twig template extends this layout.
 
@@ -168,4 +168,8 @@ Do not hesitate, every little contribution is a great way to make this starter k
 
 ## Contact
 
+If you have any question about this package, how to install, to use or to improve, feel free to contact me:
+
 Antoine Bollinger - [LinkedIn](https://www.linkedin.com/in/antoinebollinger/) - antoine.bollinger@gmail.com
+
+You can talk to me in 🇫🇷, 🇧🇷 or 🇬🇧.
