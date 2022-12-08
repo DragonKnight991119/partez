@@ -1,7 +1,7 @@
 class App {
     #preContainers = document.querySelectorAll("pre");
     constructor() {
-        console.log("🔥 Welcome on PHP Starter kit ! 🔥\r\nPlease feel free to edit js in public/js directory.");
+        console.log("🔥 Welcome to partez! 🔥\r\nPlease feel free to edit js in public/js directory.");
         this._setCodeCopyLink();
     }
 
