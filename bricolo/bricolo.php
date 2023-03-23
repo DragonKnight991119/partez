@@ -42,7 +42,7 @@ class Bricolo
             
             echo "Creating a new page named " . $ucName . "\r\n";
             copy(APP_ROOT . "/bricolo/templates/controller.php", $controllerPath);
-            echo "Page " . $ucName . " created!\r\nPlease edit " . $controllerPath . "/controller.php" . " to configure this new page.\r\nIf you're using the routes.yaml file for the router, don't forget to add this new page in it.";
+            echo "Page " . $ucName . " created!\r\n\r\nPlease edit " . $controllerPath . "/controller.php" . " to configure this new page, starting by customizing the controller's name with " . $ucName . "Controller.\r\n\r\nAlso do not forget to add this new page in the src/config/yaml/routes.yaml file, with :\r\n\r\n- route: /" . $name . "\r\n  name: " . $ucName . "\r\n  controller: Abollinger\Partez\Controller\\" . $ucName . "Controller\r\n\r\n";
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage());
         } 

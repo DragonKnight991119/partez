@@ -136,12 +136,14 @@ The basic structure is:
 │   ├── templates/
 │   └── bricolo.php
 ├── config/
+│   ├── yaml
+│   │   │── constants.yaml
+│   │   │── routes.yaml
+│   │   └── texts.yaml
 │   ├── boostrap.php
 │   ├── controller.php
 │   ├── helpers.php
-│   ├── router.php
-│   ├── routes.yaml
-│   └── texts.yaml
+│   └── router.php
 ├── public/
 │   ├── css/
 │   ├── images/
