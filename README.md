@@ -55,7 +55,7 @@ All you need is [Composer](https://getcomposer.org/) to create the project run t
 2. Run the following command. This will create all the necessaries files and install the dependencies of the project:
 
 ```bash
-composer create-project abollinger/partez . "1.2.*"
+composer create-project abollinger/partez . "1.3.*"
 ```
 3. Finally run this simple command:
 
