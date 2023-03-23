@@ -79,7 +79,7 @@ and then open your browser at <a href="http://localhost:8000">localhost:8000</a>
 
 ### The router
 
-Pages' routes are manually defined in the ```src/config/routes.yaml``` file. To see what a route must contain, let see the ```/about``` route:
+Pages' routes are manually defined in the ```src/config/yaml/routes.yaml``` file. To see what a route must contain, let see the ```/about``` route:
 ```yaml
 - route: /about
   name: About
@@ -88,14 +88,14 @@ Pages' routes are manually defined in the ```src/config/routes.yaml``` file. To 
 This means: 
 - The page can be accessed at the route ```<serverName>/about```
 - The name that will appear in the page's title is ```About```. Also note that you can define a title here (```title: Titre```) if you prefere.
-- The name define the controller file called: ```src/controller/About.controller.php```
+- The name define the controller file called: ```src/controllers/About.controller.php```
 - The controller called will be ```Abollinger\Partez\Controller\AboutController``` 
 
 As you can see, you are free to customized all this parameters, but it is important to respect this format. The controller will render the page as explained below.
 
 ### The pages
 
-Pages are rendered by the controller in the ```src/controller``` path. This controller must be an extension of the main controller define in ```config/controller.php```.
+Pages are rendered by the controller in the ```src/controllers``` path. This controller must be an extension of the main controller define in ```config/controller.php```.
 In the page's controller you must define the ```init()``` method that will call the ```renderView("page.html.twig")``` method which render the twig template.
 
 The twig templates are localized in the ```templates/``` at the root of the project. Basic twig layout is defined as ```templates/layout.html.twig``` and each page's twig template extends this layout.
@@ -114,7 +114,7 @@ We've create a basic tool named Bricolo, localized in ```bricolo/bricolo.php```.
 ```bash
 composer bricolo addpage <pagename>
 ```
-This will automatically create the Controller file in ```src/controller/<Pagename>.controller.php``` ( copy of the template at ```bricolo/templates/controller.php```).
+This will automatically create the Controller file in ```src/controllers/<Pagename>.controller.php``` ( copy of the template at ```bricolo/templates/controller.php```).
 
 🚩 Don't forget to rename this new controller (default is NewController) and to declare the route in the config/routes.yaml following the example above, and change the twig template used (default is ```templates/views/template.html.twig```).
 

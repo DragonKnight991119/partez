@@ -38,7 +38,7 @@ class Bricolo
             $ucName = ucfirst($params[0]);
             $name = strtolower($params[0]);
 
-            $controllerPath = APP_ROOT . "/src/controller/" . $ucName . ".controller.php";
+            $controllerPath = APP_ROOT . "/src/controllers/" . $ucName . ".controller.php";
             
             echo "Creating a new page named " . $ucName . "\r\n";
             copy(APP_ROOT . "/bricolo/templates/controller.php", $controllerPath);

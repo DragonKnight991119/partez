@@ -18,11 +18,11 @@
         }
     },
     "scripts": {
-        "serve": "php -S localhost:8000",
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "php -S localhost:8000"
+        ],
         "bricolo": "php bricolo/bricolo.php"
-    },
-    "config": {
-        "process-timeout": 0
     },
     "authors": [
         {

@@ -43,6 +43,8 @@ class AppRouter extends Router
                 "name" => $this->route["name"],
                 "title" => $this->route["title"] ?? null, 
                 "route" => $this->route["route"] ?? null, 
+                "controller" => $this->route["controller"] ?? null, 
+                "controllerPath" =>  str_replace(APP_ROOT, "", $controllerPath),
                 "routes" => $this->routesOnNavbar
             ]);
             return true;

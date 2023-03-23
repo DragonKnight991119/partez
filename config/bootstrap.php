@@ -26,8 +26,9 @@ abstract class Bootstrap
         define("APP_ROOT", str_replace("\\", "/", dirname(__DIR__)));
         define("APP_SUBDIR", str_replace(str_replace("\\", "/",$_SERVER["DOCUMENT_ROOT"]), "", APP_ROOT));
         define("APP_CONFIG_PATH", __DIR__);
-        define("APP_MODEL_PATH", APP_ROOT . "/src/model");
-        define("APP_CONTROLLER_PATH", APP_ROOT . "/src/controller"); 
+        define("APP_YAML_PATH", APP_CONFIG_PATH . "/yaml");
+        define("APP_MODEL_PATH", APP_ROOT . "/src/models");
+        define("APP_CONTROLLER_PATH", APP_ROOT . "/src/controllers"); 
         define("APP_ROUTER_PATH", APP_ROOT . "/src/router");
         define("APP_TEMPLATES_PATH", APP_ROOT . "/templates");
 

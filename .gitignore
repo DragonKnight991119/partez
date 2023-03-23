@@ -9,6 +9,8 @@
 /vendor/
 
 # deploy
-deploy.php
-deploy-config.php
+deploy*.php
 redirect.php
+
+# VSCode 
+.vscode

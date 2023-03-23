@@ -29,7 +29,7 @@ require_once APP_ROUTER_PATH . "/App.router.php";
 $path = parse_url(str_replace(APP_SUBDIR, "", $_SERVER['REQUEST_URI']), PHP_URL_PATH) ?? "/";
 $app = new AppRouter(
     $path, 
-    APP_ROOT . "/config/routes.yaml", 
-    APP_ROOT . "/config/texts.yaml"
+    APP_YAML_PATH . "/routes.yaml", 
+    APP_YAML_PATH . "/texts.yaml"
 );
 $app->start();

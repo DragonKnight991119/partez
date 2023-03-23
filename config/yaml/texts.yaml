@@ -1,0 +1,5 @@
+error:
+  controller: There is no controller for this route. Please check the src/controllers directory.
+  model: The required model doesn't exist. Please check in the src/models directory.
+  page: Oups! We were not able to find this page.
+  file: The file you're trying to read doesn't exists. Please check again.
